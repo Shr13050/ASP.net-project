@@ -52,6 +52,8 @@ public static class GamesEndpoints
         );
 
         //Put /games/{id}
+
+        
         group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
         {
             var gameIndex = games.FindIndex(game => game.Id == id);
